@@ -78,26 +78,14 @@ def winner (player1, player2)
         "#{player1} wins"
     elsif player1 == 'paper' && player2 == 'rock'
         "#{player1} wins"
+    elsif player1 == 'rock' && player2 == 'rock' || player1 == 'scissors' && player2 == 'scissors' || player1 == 'paper' && player2 == 'paper'
+        "You both tie"
     else "#{player2} wins"
-    # if ['rock' == 'rock'] || ['paper' == 'paper'] || ['scissors' == 'scissors']
-    #     'you tie'
-    # elsif ['rock' > 'scissors'] || ['scissors' > 'paper'] || ['paper' > 'rock']
-    #     'you win'
-    # else ['scissors' < 'rock'] || ['paper' < 'scissors'] || ['rock' < 'paper']
-    #     'you lose'
-    # if rock > scissors || scissors > paper || paper > rock
-    #     'You win'
-    # elsif scissors < rock || paper < scissors || rock < paper
-    #     'You lose'
-    # else rock == rock || scissors == scissors || paper == paper
-    #     "you tie"
     end
 end
 
 p winner(choice1, choice2)
 
-
-    
 # As a user, I can see a message in the terminal noting if there was a tie.
 
 
