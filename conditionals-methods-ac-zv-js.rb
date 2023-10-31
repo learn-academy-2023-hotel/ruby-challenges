@@ -37,12 +37,76 @@
  
 # Create a method that takes in a string and determines if the string is a palindrome. 
 
-def palindrome? (string)
-    if string == string.reverse
-        puts "this is a palindrome"
+# def palindrome? (string)
+#     if string == string.reverse
+#         puts "this is a palindrome"
+#     else
+#         puts "this is not a palindrome" 
+#     end
+# end
+ 
+# palindrome?("racecar")
+
+
+# ✂️ Challenge: Rock, Paper, Scissors
+# As the first user, I can see a prompt in the terminal to enter my name.
+
+# puts 'Enter First User Name'
+#     name = gets.chomp
+    
+# p name
+
+# # As the second user, I can see a prompt in the terminal to enter my name.
+
+# # if name == "Judas"
+# #     puts 'Hello Judas'
+# # else 
+
+# puts 'Enter Second User Name'
+#     name2 = gets.chomp
+    
+# p name2
+
+
+# # As the first user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
+
+# puts 'Rock, Paper, or Scissors?'
+#     game1 = gets.chomp
+    
+# p game1
+
+# # As the second user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
+
+# puts 'Rock, Paper, or Scissors?'
+#     game2 = gets.chomp
+    
+# p game2
+
+# As a user, I can see a message in the terminal depicting which user won the round.
+
+
+# As a user, I can see a message in the terminal noting if there was a tie
+
+def game_results 
+    puts "Enter First User Name"
+    name1 = gets.chomp
+    puts "Enter Second User Name"
+    name2 = gets.chomp
+    puts "First User choose Rock, Paper, or Scissors?"
+    game1 = gets.chomp
+    puts "Second User choose Rock, Paper, or Scissors?"
+    game2 = gets.chomp
+    if game1 == game2
+        return 'it is a tie'
+    elsif game1 == "Rock" && game2 == "Scissors"
+        return "#{name1} is the winner"
+    elsif game1 == "Scissors" && game2 == "Paper"
+        return "#{name1} is the winner"
+    elsif game1 == "Paper" && game2 == "Rock"
+        return "#{name1} is the winner"
     else
-        puts "this is not a palindrome" 
+        return "#{name2} is the winner"
     end
 end
- 
-palindrome?("racecar")
+
+p game_results
