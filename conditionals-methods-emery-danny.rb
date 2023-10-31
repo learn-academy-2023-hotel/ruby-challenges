@@ -41,3 +41,44 @@ def palindrome(string)
 end
 
 # p palindrome('anna')
+
+
+# As the first user, I can see a prompt in the terminal to enter my name.
+
+p 'Player 1, enter your name'
+player_1 = gets.chomp
+p 'Player 2, enter your name'
+player_2 = gets.chomp
+
+p 'Choose rock, paper, or scissors'
+p1_action = gets.chomp
+p 'Choose rock, paper, or scissors'
+p2_action = gets.chomp
+
+def winner(player1, player2)
+    if player1 == player2
+        "It's a tie!"
+    elsif player1 == 'rock' && player2 == 'scissors'
+        'Player 1 wins!'
+    elsif player1 == 'paper' && player2 == 'rock'
+        'Player 1 wins!'
+    elsif player1 == 'scissors' && player2 == 'paper'
+        'Player 1 wins!'
+    else
+        'Player 2 wins!'
+    end
+end
+p winner(p1_action, p2_action)
+
+
+# def loser(player1, player2)
+#     unless 
+    
+
+
+
+# As the second user, I can see a prompt in the terminal to enter my name.
+# As the first user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
+# As the second user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
+# As a user, I can see a message in the terminal depicting which user won the round.
+# As a user, I can see a message in the terminal noting if there was a tie.
