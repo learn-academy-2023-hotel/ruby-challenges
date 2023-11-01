@@ -58,22 +58,55 @@
 
 # p largest_number nums
 
-nums = [16, 32, 10, 21]
+# nums = [16, 32, 10, 21]
 
 # Create a method that takes in an array of words and returns the word with the least number of characters.
 
-words = ["soccer", "basketball", "golf"]
+# words = ["soccer", "basketball", "golf"]
 
-def short_word array
-    array.min_by {|value| value.length}
-end
+# def short_word array
+#     array.min_by {|value| value.length}
+# end
 
-p short_word words
+# p short_word words
 
 # Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
 
+# nums = 0..20
+
+# p odd = nums.select { |value| value.odd? }
+
+# Output: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+
 # Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercase letters should be returned lowercased and all lowercased letters should be returned in uppercase letters.
 
+# words = ['Random', 'Words', 'oNe']
+
+# def flip_undercase (letters)
+#     flip_undercase = letters.map do |word|
+#         word.swapcase
+#     end
+# end
+# p flip_undercase words
+# Output: ["rANDOM", "wORDS", "OnE"]
+
+
 # Create a method that will take in an array of numbers and return an array with the remainder of each number when divided by 2.
+
+nums = [16, 32, 10, 21]
+
+# def remainder num   
+#     remainder_array = num.map { |num| num % 2 }
+# end
+
+# p remainder nums # Output: [0, 0, 0, 1]
+
+mapped = nums.map do |value| 
+    value % 2
+end
+
+p mapped # Output: [0, 0, 0, 1]
+
 
 # Create a method that will take in a range of letters and return an array with all the letters capitalized.
