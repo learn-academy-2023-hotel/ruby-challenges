@@ -36,9 +36,29 @@ phone = {ups:'delivery service', google_maps:'navigation', yelp: 'food'}
 #    p "#{value} that are in #{key}"
 # end
 
+# def phone_description hash
+#     hash.map do |key,value|
+#      "#{value} that are in #{key}" 
+#     end
+# end
+# p phone_description phone
+
+# STRETCH GOALS 
+
+# As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone application.
+
 def phone_description hash
     hash.map do |key,value|
-     "#{value} that are in #{key}" 
+        "#{key.capitalize} = #{value}"
+    end
+end
+p phone_description phone
+
+# As a developer, I can create a custom method that takes in my_phone and returns an array with a sentence about the name of each application.
+
+def phone_description hash
+    hash.map do |key,value|
+     "#{value} that are in #{key.capitalize}" 
     end
 end
 p phone_description phone
