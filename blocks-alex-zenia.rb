@@ -114,15 +114,25 @@
 
 # Create a method that takes in an array of words and returns all the words that start with a particular letter. Example: Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
 
-word_array = ['Argentina', 'France', 'Denmark', 'England', 'India', 'Iceland', 'Armenia']
+# word_array = ['Argentina', 'France', 'Denmark', 'England', 'India', 'Iceland', 'Armenia']
 
-def word_filter (array)
-    array.include?('A') do |value|
-        p value
-    end
-end
+# def word_filter (array)
+#     array.select do |value|
+#         value.include?('I')
+#     end
+# end
 
-p word_filter word_array
+# p word_filter word_array
 
 
 # Create a method that takes in an array of mixed data types and returns an array without any false, null, 0, or blank values.
+
+# data_mix = [12, false, 'apple', true, '', nil, 37, 0, 'cat']
+
+# def data_filter (array)
+#     array.select do |value|
+#         value != 0 && value != '' && value != nil && value != false
+#     end
+# end
+
+# p data_filter data_mix
