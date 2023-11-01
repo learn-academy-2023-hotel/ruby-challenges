@@ -56,20 +56,41 @@
 
 # Create a method that takes in an array of words and returns the word with the least number of characters.
 
-words = ['ruby', 'javascript', 'css', 'html', 'react']
+# words = ['ruby', 'javascript', 'css', 'html', 'react']
 
-def short_word(array)
-    short_word = array[0]
-    words.each do |array|
-        short_word = word
-    if
-        word.length < short_word.length
-end
+# def short_word(array)
+#     short_word = array[0]
+#     array.each do |word|
+#         if word.length < short_word.length   
+#             short_word = word
+#         end
+#     end
+#     return short_word
+# end
 
-# p words_array(words)
-p short_word(words)
+# p short_word(words)
+
 
 # Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
+
+big_num = [1, 2, 3, 14, 5, 6, 7, 8, 9, 10]
+
+def only_odds(array)
+    array.select do | value |
+        value.odd?
+    end
+end
+
+p only_odds(big_num)
+
+# big_num.select do |number|
+#     number.odd?
+#     return big_num 
+# end
+
+# big_num.select { |number| number.odd? }
+
+# p number
 
 
 
