@@ -53,7 +53,6 @@
 nums = [55,2,3,4,501,6,7,8,9,10]
 
 def only_odd (array)
-    array.sort_by!
     array.select do |value|
         value.odd? 
     end
