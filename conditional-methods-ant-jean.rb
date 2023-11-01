@@ -95,7 +95,7 @@ second_choice = second_user user2_choice
 # 2ND WAY TO SOLVE - CONDITIONAL
 
 
-    # if first_choice == "Rock" && second_choice == "Scissor" 
+    # if first_choice == "Rock" && second_choice == "Scissors" 
     #     puts "#{first_user} Wins the Round!"
 
     #     elsif first_choice == "Paper" && second_choice == "Rock"
@@ -106,7 +106,7 @@ second_choice = second_user user2_choice
 
     # else
 
-    #     if second_choice == "Rock" && first_choice == "Scissor" 
+    #     if second_choice == "Rock" && first_choice == "Scissors" 
     #         puts "#{second_user_user} Wins the Round!"
     
     #     elsif second_choice == "Paper" && first_choice == "Rock"
