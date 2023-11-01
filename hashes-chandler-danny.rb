@@ -36,14 +36,34 @@ my_phone[:Spotify] = "Music Streaming App"
 my_phone.delete(:Uber_Eats)
 my_phone.delete(:Instagram)
 
-p my_phone
+# p my_phone
 # {:YouTube=>"Video streaming App", :Spotify=>"Music Streaming App", :Maps=>"Navigation App"}
 
 # As a developer, I can use an enumerable method to return information about all of my_phone's applications.
 
-my_phone.each do |key, value|
-    p "#{key} is a #{value}"
-end
+# my_phone.each do |key, value|
+#     p "#{key} is a #{value}"
+# end
 # "YouTube is a Video streaming App"
 # "Spotify is a Music Streaming App"
 # "Maps is a Navigation App"
+
+# As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone application.
+
+def apps hash 
+    hash.map do |key, value|
+        "#{key.to_s.capitalize}: #{value}"
+    end
+end
+# p apps my_phone
+# ["Youtube: Video streaming App", "Spotify: Music Streaming App", "Maps: Navigation App"]
+
+# As a developer, I can create a custom method that takes in my_phone and returns an array with a sentence about the name of each application.
+
+def app hash
+    hash.map do |key, value|
+        "The name #{key} came from the developers and they wanted it to be use as a #{value}"
+    end
+end
+
+p app my_phone
