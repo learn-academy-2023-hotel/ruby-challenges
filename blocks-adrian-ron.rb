@@ -49,14 +49,25 @@
 
 # Create a method that takes in an array of numbers and returns the largest number in the array.
 
-big_num = [1, 2, 3, 14, 5, 6, 7, 8, 9, 10]
+# big_num = [1, 2, 3, 14, 5, 6, 7, 8, 9, 10]
 
-p big_num.max()
+# p big_num.max()
 
 
 # Create a method that takes in an array of words and returns the word with the least number of characters.
 
+words = ['ruby', 'javascript', 'css', 'html', 'react']
 
+def short_word(array)
+    short_word = array[0]
+    words.each do |array|
+        short_word = word
+    if
+        word.length < short_word.length
+end
+
+# p words_array(words)
+p short_word(words)
 
 # Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
 
