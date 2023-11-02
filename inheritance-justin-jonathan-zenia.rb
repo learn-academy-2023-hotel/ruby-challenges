@@ -64,10 +64,11 @@ end
 bear = Mammal.new(20)
 # bear.birth_day
 bear.old_mammal
-p bear
+# p bear
 
 cat = Mammal.new(5)
-p cat
+dog = Mammal.new(100)
+# p cat
 
 # As a developer, I can initialize all of my Mammals to be warm_blooded.
 # As a developer, I can create a Bear that inherits from Mammal.
@@ -89,8 +90,15 @@ p cat
 # 🏔 Stretch Goals
 
 # As a developer, I can keep a collection of two of each Animal.
+animals = [dog, cat, bear]
+# p animals
+
 # Hint: You'll want to add your Animals into an array.
 # As a developer, I can sort my collection of Animals based on age.
+p animals.sort_by(&:age)
+# p animals.ages.sort { |a, b| a <=> b}
 # Hint: Find out how the spaceship operator can help you with an array.
+
 # As a developer, I can utilize a Ruby module to help DRY up my code. I can create a swim method inside of my module that will apply to Animals who can swim. This method should return "I can swim!"
+
 # Hint: Look into module mix ins. Since not all animals can swim, only certain Animals will have access to this module.
