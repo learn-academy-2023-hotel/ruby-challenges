@@ -129,3 +129,23 @@
 #     p cleaning.get_ir_done
 #     p cleaning
   
+
+class ColorPalette
+    attr_accessor :color1, :color2, :color3
+    def initialize(color1, color2, color3)
+        @color1 = color1
+        @color2 = color2
+        @color3 = color3
+    end
+    def all_colors
+        "The color palette includes #{color1}, #{color2}, and #{color3}."
+    end
+end
+
+green = ColorPalette.new('Hunter', 'Barf', 'Forest')
+blue = ColorPalette.new('Tiffany', 'Cerulean', 'Baby')
+purple = ColorPalette.new('Violet', 'Barney', 'Lavender')
+p green.all_colors
+p blue.all_colors
+p purple.all_colors
+
