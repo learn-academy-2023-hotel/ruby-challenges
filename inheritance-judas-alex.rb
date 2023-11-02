@@ -52,6 +52,7 @@ end
 # As a developer, I can create a Salmon that inherits from Fish.
 # salmon = Fish.new('Atlantic', true, 0, true)
 # p salmon
+# p salmon.name
 # salmon.add_year
 # salmon.add_year
 # salmon.add_year
@@ -75,9 +76,6 @@ class Mammal < Animal
     def initialize(name, alive, age, warm_blooded)
         super(name, alive, age)
         @warm_blooded = true
-        if @age == 5
-            @alive == false
-        end
     end
     def get_mammal_info
         if @alive == true
@@ -86,20 +84,23 @@ class Mammal < Animal
             "#{@name} is no longer with us."
         end
     end
+    def swim
+        "I am a #{@name}. I can swim!"
+    end
 end
 # As a developer, I can initialize all of my Mammals to be warm_blooded.
 
 # As a developer, I can create a Bear that inherits from Mammal.
-bear = Mammal.new('Bear', true, 0, true)
+bear = Mammal.new('bear', true, 0, true)
 
 # As a developer, I can age my Bear up.
-bear.add_year
-bear.add_year
-bear.add_year
-bear.add_year
-bear.add_year
-bear.age_limit
-p bear.get_mammal_info
+# bear.add_year
+# bear.add_year
+# bear.add_year
+# bear.add_year
+# bear.add_year
+# bear.age_limit
+# p bear.get_mammal_info
 
 # As a developer, I can see a message that tells me all of my Bear's information.
 
@@ -107,7 +108,32 @@ p bear.get_mammal_info
 # Hint: You will need a method that changes the status of alive in the initialize method of Animal.
 
 # As a developer, I can create a Mammal of my choice.
+panther = Mammal.new('panther', true, 0, true)
+# # As a developer, I can interact with the new Mammal via various methods.
+# p panther
 
-# As a developer, I can interact with the new Mammal via various methods.
+# # As a developer, I can see a message that tells me all of my new Mammal's information.
+# p panther.get_mammal_info
 
-# As a developer, I can see a message that tells me all of my new Mammal's information.
+# 🏔 Stretch Goals
+
+# As a developer, I can keep a collection of two of each Animal.
+animal_zoo = [panther, bear]
+# Hint: You'll want to add your Animals into an array.
+# p animal_zoo
+# As a developer, I can sort my collection of Animals based on age.
+# bear.add_year
+# bear.add_year
+# panther.add_year
+# panther.add_year
+# panther.add_year
+
+# p panther <=> bear
+
+# Hint: Find out how the spaceship operator can help you with an array.
+
+# As a developer, I can utilize a Ruby module to help DRY up my code. I can create a swim method inside of my module that will apply to Animals who can swim. This method should return "I can swim!"
+# Hint: Look into module mix ins. Since not all animals can swim, only certain Animals will have access to this module.
+
+p panther.swim
+p bear.swim
