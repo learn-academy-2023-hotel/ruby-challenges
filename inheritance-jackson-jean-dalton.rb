@@ -37,39 +37,55 @@ end
 # dog.age_up
 # p dog.dead_alive
 
-class Fish < Animal 
-  # attr_accessor :age, :alive
-  def initialize(type, age, cold_blooded)     
-    super(age, alive)
-    @type = type
-    @cold_blooded = cold_blooded
-    @age = age
-  end 
-  def fish_info
-    "My salmon is #{@type}, is #{@age}, and is also #{@cold_blooded}"
-  end
-  def fish_life 
-    if @age <= 0 && @age >= 4
-      "#{@type} is alive"
-    else 
-      "#{@type} died peacefully"
-    end  
-  end        
-end   
+# class Fish < Animal 
+#   # attr_accessor :age, :alive
+#   def initialize(type, age, cold_blooded)     
+#     super(age, alive)
+#     @type = type
+#     @cold_blooded = cold_blooded
+#     @age = age
+#   end 
+#   def fish_info
+#     "My salmon is #{@type}, is #{@age}, and is also #{@cold_blooded}"
+#   end
+#   def fish_life 
+#     if @age <= 0 && @age >= 4
+#       "#{@type} is alive"
+#     else 
+#       "#{@type} died peacefully"
+#     end  
+#   end        
+# end   
 
-salmon = Fish.new('Alaskan', 2 , 'cold blooded')
-salmon.age_up
-salmon.age_up
-salmon.age_up
-p salmon.fish_info
-p salmon.fish_life
-
-
-# As a developer, if my Salmon reaches the ripe old age of 4, I can make it die peacefully after a full and happy life.
-# Hint: You will need a method that changes the status of alive in the initialize method of Animal.
+# salmon = Fish.new('Alaskan', 2 , 'cold blooded')
+# salmon.age_up
+# salmon.age_up
+# salmon.age_up
+# p salmon.fish_info
+# p salmon.fish_life
+#  As a developer, if my Salmon reaches the ripe old age of 4, I can make it die peacefully after a full and happy life.
+# # Hint: You will need a method that changes the status of alive in the initialize method of Animal.
 # As a developer, I can create a Mammal that inherits from Animal.
 # As a developer, I can initialize all of my Mammals to be warm_blooded.
 # As a developer, I can create a Bear that inherits from Mammal.
+
+class Mammal < Animal
+  attr_accessor :age, :alive 
+  def initialize(alive , age, warm_blooded)
+    super(alive, age)
+    @warm_blooded = warm_blooded
+  end
+  def bear_info
+    "My bear is #{@age} , he is #{@warm_blooded} and alive"
+  end
+end
+
+bear = Mammal.new( 3 , 'warm blooded' , 'alive')
+
+p bear.bear_info
+
+
+
 # As a developer, I can age my Bear up.
 # As a developer, I can see a message that tells me all of my Bear's information.
 # As a developer, if my Bear turns 20 years old, I can make it die peacefully after a full and happy life.
