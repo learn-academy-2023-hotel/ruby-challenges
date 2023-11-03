@@ -61,33 +61,33 @@
 # input_2 =gets.downcase.chomp
 # As a user, I can see a message in the terminal depicting which user won the round.
 # As a user, I can see a message in the terminal noting if there was a tie.
-# def game ()
-  puts 'Enter name here: '
-  name_one = gets.chomp
-  puts 'Enter another name here: '
-  name_two = gets.chomp
-  puts "type either 'rock', 'paper', or 'scissors'"
-  input_1 =gets.downcase.chomp
-  puts "type either 'rock', 'paper', or 'scissors'"
-  input_2 =gets.downcase.chomp
+# # def game ()
+#   puts 'Enter name here: '
+#   name_one = gets.chomp
+#   puts 'Enter another name here: '
+#   name_two = gets.chomp
+#   puts "type either 'rock', 'paper', or 'scissors'"
+#   input_1 =gets.downcase.chomp
+#   puts "type either 'rock', 'paper', or 'scissors'"
+#   input_2 =gets.downcase.chomp
 
-  if input_1 == 'rock' && input_2 == 'scissors'
-  p "#{name_one} is the winner"
-  elsif input_1 == 'paper' && input_2 == 'rock'
-  p "#{name_one} is the winner"
-  elsif input_1 == 'scissors' && input_2 == 'paper'
-  p "#{name_one} is the winner"
-  elsif input_2 == 'rock' && input_1 == 'scissors'
-  p "#{name_two} is the winner"
-  elsif input_2 == 'paper' && input_1 == 'rock'
-  p "#{name_two} is the winner"
-  elsif input_2 == 'scissors' && input_1 == 'paper'
-  p "#{name_two} is the winner"
-   else 
-  p "It's a TIE!"
-  end
-# end
-# puts game() 
+#   if input_1 == 'rock' && input_2 == 'scissors'
+#   p "#{name_one} is the winner"
+#   elsif input_1 == 'paper' && input_2 == 'rock'
+#   p "#{name_one} is the winner"
+#   elsif input_1 == 'scissors' && input_2 == 'paper'
+#   p "#{name_one} is the winner"
+#   elsif input_2 == 'rock' && input_1 == 'scissors'
+#   p "#{name_two} is the winner"
+#   elsif input_2 == 'paper' && input_1 == 'rock'
+#   p "#{name_two} is the winner"
+#   elsif input_2 == 'scissors' && input_1 == 'paper'
+#   p "#{name_two} is the winner"
+#    else 
+#   p "It's a TIE!"
+#   end
+# # end
+# # puts game() 
 
 # As a developer, you have been tasked with creating the user registration for a secure web site. To test your code, enter the user ID and password in the terminal to find out if they are acceptable. The user ID and password must adhere to the to following criteria:
 
@@ -122,3 +122,13 @@
 #    p "#{player2} wins!"
 # end
 
+puts 'Create a user ID: '
+user_id = gets.chomp
+puts 'Create a password'
+password = gets.chomp
+unless user_id == password || user_id.length >= 6 
+  || password.length >= 6 
+  || password.include? ("!#$")
+  || password.upcase.include? ("password")
+else 'password setup complete'
+end
