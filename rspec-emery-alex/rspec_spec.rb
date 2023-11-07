@@ -30,4 +30,10 @@ describe 'Task' do
         my_task = Task.new
         expect{my_task.status}.to change{my_task.progress}.from('in progress').to('done')
     end
+    it 'has a due date' do
+        my_task = Task.new
+        due_date = Date.new(2023, 11, 8)
+        expect(my_task.due_date).to be_a String
+        expect(my_task.due_date).to eq "2023-11-08"
+    end
 end

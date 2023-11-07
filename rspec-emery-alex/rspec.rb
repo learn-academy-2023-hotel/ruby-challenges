@@ -5,11 +5,12 @@
 # As a developer, I can create a Task.
 
 class Task
-    attr_accessor :title, :description, :progress
+    attr_accessor :title, :description, :progress, :due_date
     def initialize
         @title = title
         @description = description
         @progress = 'in progress'
+        @due_date = due_date
     end
     
     def status
@@ -17,11 +18,18 @@ class Task
     end
 end
 
+# def initialize 
+# due_date = Date.new(2023, 11, 08)
+
 # As a developer, I can give a Task a title and retrieve it.
 
-# task = Task.new
-# task.title = 'Chores'
-# p task.title
+task = Task.new
+task.title = 'Chores'
+task.description = 'Things I have to do'
+task.due_date = '2023-11-08'
+task.status
+p task
+
 
 # As a developer, I can give a Task a description and retrieve it.
 
