@@ -10,11 +10,14 @@ class Task
         @title = title
         @description = description
         @progress = 'in progress'
-        @due_date = due_date
+        @due_date = ''
     end
     
     def status
         @progress = 'done'
+    end
+    def deadline date
+        @due_date = date
     end
 end
 
@@ -26,7 +29,7 @@ end
 task = Task.new
 task.title = 'Chores'
 task.description = 'Things I have to do'
-task.due_date = '2023-11-08'
+task.due_date
 task.status
 p task
 

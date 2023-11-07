@@ -1,5 +1,6 @@
 require 'rspec'
 require_relative 'rspec.rb'
+require 'date'
 
 describe 'Task' do
     it 'should exist' do
@@ -31,9 +32,10 @@ describe 'Task' do
         expect{my_task.status}.to change{my_task.progress}.from('in progress').to('done')
     end
     it 'has a due date' do
-        my_task = Task.new
         due_date = Date.new(2023, 11, 8)
-        expect(my_task.due_date).to be_a String
-        expect(my_task.due_date).to eq "2023-11-08"
+        my_task = Task.new
+        my_task.deadline due_date
+        expect(my_task.due_date).to be_a Date
+        expect(my_task.due_date.to_s).to eq '2023-11-08'
     end
 end
