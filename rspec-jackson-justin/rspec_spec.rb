@@ -1,24 +1,32 @@
 require 'rspec'
-require_relative 'rspec.rb'
+require_relative 'task.rb'
 
-describe Task do
-  it 'has to be real' do
-    expect{ Task.new('', '')}.to_not raise_error    
+describe 'Task' do
+  it 'should be real' do
+    expect{ Task.new }.to_not raise_error    
   end
 
-  it 'has a duty' do
-    task = Task.new('Dishes')
-    expect(task.duty).to eq('Dishes')
-    expect(task.duty).to be_a(String)
+  it 'has a title' do
+    my_task = Task.new
+    my_task.title = 'Dishes'
+    expect(my_task.title).to be_a String
+    expect(my_task.title).to eq 'Dishes'
   end
 
   it 'has a description' do
-    task = Task.new('Dishes')
-    expect(task.description).to eq('washing dishes')
-    expect(task.description).to be_a(String)
+    my_task = Task.new
+    my_task.description = 'washing dishes'
+    expect(my_task.description).to be_a String
+    expect(my_task.description).to eq 'washing dishes'
+  end
+  
+  it 'has progression' do
+    my_task = Task.new
+    my_task.progress = 'completed'
+    expect(my_task.progress).to eq 'completed'
+    expect(my_task.progress).to be_a String
   end  
 end  
-
 
 
 
