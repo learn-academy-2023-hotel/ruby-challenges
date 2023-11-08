@@ -22,12 +22,6 @@ end
 
 
 
-# As a developer, I can give a Task a due date. Hint: Use the built-in Ruby Date class.
-
-
-
-
-
 # 🏔 Stretch Goals
 # As a developer, I can add all of my Tasks to a TaskList.
 # As a developer with a TaskList, I can print the completed items.

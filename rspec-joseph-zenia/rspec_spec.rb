@@ -38,3 +38,10 @@ describe 'Task' do
     expect(my_tasks.due_date).to eq 2023-11-8
   end
 end
+
+describe 'TaskList' do 
+  it 'should exist' do
+    expect{ TaskList.new }.to_not raise_error
+  end
+end
+
