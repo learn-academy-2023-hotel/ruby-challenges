@@ -48,13 +48,6 @@
 # For the following ColorPalette challenge use initialize and attr_accessor methods in your class.
 
 # As a developer, I can create a class called ColorPalette.
-# class ColorPalette
-#   def set_color_palette(color1)
-#     @color1 = color1
-#     @color2 = color2
-#     @color3 = color3
-#   end
-# end
 
 # As a developer, I can create three instances (objects) of class ColorPalette.
 # green = ColorPalette.new
