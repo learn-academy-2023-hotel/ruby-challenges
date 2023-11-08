@@ -22,12 +22,26 @@ describe 'Task' do
   
   it 'has progression' do
     my_task = Task.new
-    my_task.progress = 'completed'
-    expect(my_task.progress).to eq 'completed'
+    my_task.progress = 'in progress'
+    expect(my_task.progress).to eq 'in progress'
     expect(my_task.progress).to be_a String
+    # my_task_completed = Task.new
+    # expect(my_task_completed.progress).to eq ''
+    # expect(my_task_completed.progress).to be_a String
+  end
+  
+  it 'is completed' do
+    my_task = Task.new
+    my_task.completed = 'completed'
+    expect(my_task.completed).to eq 'completed'
+    expect(my_task.completed).to be_a String
   end  
 end  
 
+# dishes = Task.new('dishes')
+# p dishes.completed
+# dishes.progress = 'completed'
+# p dishes.completed
 
 
 
