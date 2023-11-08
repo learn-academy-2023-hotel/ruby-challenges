@@ -8,6 +8,7 @@
 
 require 'rspec'
 require_relative 'title.rb'
+require 'date'
 
 describe 'Task' do
     it 'should exist' do
@@ -28,16 +29,16 @@ describe 'Task' do
         expect(my_task.title).to eq 'Get my car washed'
     end 
     
-    it 'needs to be washed'do
+    it 'needs to be washed' do
         my_task = Task.new
         expect(my_task.status).to be_a String
         expect{my_task.change_status}.to change{my_task.status}.from('in_progress').to('done')
     end 
 
-    it 'has a due date'
+    it 'due date' do
         my_task = Task.new
-        expect(my_task.due_date).to be_a String
-        expect{my_task.due_date}.to eq '2023-11-11'
+        due_date = Task.new(2023, 11, 11)
+        expect(my_task.due_date).to be_a Date
+        expect{my_task.due_date}.to eq due_date
     end 
-
 end

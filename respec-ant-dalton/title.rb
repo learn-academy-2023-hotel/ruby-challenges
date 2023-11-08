@@ -13,6 +13,10 @@ class Task
     end 
 
     def wash_date
-        due_date = Date.new(2023,11,11)
+         due_date = Date.new(2023, 11, 11)
+
+         #task.due_date = '2023-11-11'
     end
 end 
+
+
