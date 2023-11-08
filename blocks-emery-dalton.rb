@@ -42,3 +42,20 @@
 # end 
 # p large_num nums_array
 # Output --> 98
+
+# array_words = ['sweater','shirt','dogs', 'cat']
+# def short_word (array)
+#     array.min
+# end
+# p short_word array_words
+#"cat"
+
+number = [4,3,1,9]
+def only_odd (number)
+        number.select! do |value|
+            value.odd?   
+        end
+        number.sort
+    end
+    p only_odd number
+    # [1, 3, 9]
