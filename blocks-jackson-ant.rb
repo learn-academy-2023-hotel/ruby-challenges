@@ -21,22 +21,45 @@
 
 # Create a loop that prints only even numbers from 20 to 0.
 
-nums = 0..20
+# nums = 0..20
 
-def only_evens(range)
-    range.each do |value|
-    if value.even?  
-       p value 
-    end
-  end
-end
-p only_evens nums.reverse_each   
+# def only_evens(range)
+#     range.each do |value|
+#     if value.even?  
+#        p value 
+#     end
+#   end
+# end
+# p only_evens nums.reverse_each   
 
 # Create a method that takes in an array of numbers and returns a new array with all the numbers multiplied by 5.
 
+# nums = [2, 4, 7, 9, 15]
+
+# nums.each do |value|
+#   p value * 5
+# end
+
 # Create a method that takes in an array of lowercase words and capitalizes all of the words, permanently modifying the original array.
 
+
+
+words = ["hmm", "black", "computer"]
+
+def words_lower(array)
+  array.map do |value|
+    value.capitalize!.chomp
+  end
+end
+
+p words_lower words
+
+
+# cap_lower_array = lower_array.map { |string| string.capitalized}
+
 # Create a method that takes in an array of numbers and returns the largest number in the array.
+
+
 
 # Create a method that takes in an array of words and returns the word with the least number of characters.
 
