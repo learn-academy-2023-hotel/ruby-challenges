@@ -7,7 +7,9 @@ my_phone = Hash.new
 my_phone[:facebook] = "social media"
 my_phone[:instagram] = "picture social media"
 my_phone[:slack] = "professional messaging"
+
 my_phone[:va] = "Veteran portal"
+
 my_phone[:airmap] = "No fly zone"
 #p my_phone
 
@@ -43,9 +45,11 @@ phone_app(my_phone)
 # As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone application.
 
 def phone_app(my_phone)
+
     my_phone.map do |key, value|
         ":#{key.capitalize} => #{value}"
     end
+
 end
 p phone_app(my_phone)
 
